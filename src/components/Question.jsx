@@ -3,9 +3,9 @@ import React from 'react'
 
 const Question = ({ques}) => {
 
-  return (!ques)? null :(
+  return(
 
-    <MathJax>{ques}</MathJax>
+    <MathJax inline dynamic>{ques}</MathJax>
 
   )
 }
