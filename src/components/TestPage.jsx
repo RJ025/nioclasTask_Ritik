@@ -77,7 +77,7 @@ const TestPage = () => {
             <div className='flex flex-col mt-10 gap-20'>
                 <div className="font-bold bg-red-500 p-2 rounded-lg w-fit ml-8">Time: {formatTime(timer)} seconds</div>
                 {questionBank.slice(page*1-1 , page).map((ques)=>{
-                    return (<div className='flex flex-col sm:flex-row gap-2 items-center bg-gray-200 p-4 m-4 rounded-xl shadow-2xl'>
+                    return (<div className='flex flex-col sm:flex-row gap-2 items-center bg-gray-200 p-4 m-4 rounded-xl shadow-2xl overflow-hidden'>
                                 <h1>Ques: {page}</h1>
                                 <Question ques={ques}/>
                             </div>)
