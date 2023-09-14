@@ -23,14 +23,15 @@ const TestPage = () => {
     // const intervalRef = useRef();
 
     useEffect(()=>{
-        selectedTopicsArray.forEach(async (topic)=>{
+        selectedTopicsArray.map(async (topic)=>{
             const data = await fetch(`https://0h8nti4f08.execute-api.ap-northeast-1.amazonaws.com/getQuestionDetails/getquestiondetails?QuestionID=${topic}`)
             const json = await data.json();
             setQuestionBank((prevQuestionBank)=>[...prevQuestionBank , json[0].Question])
         });
     } , [])
 
-    useEffect(()=>{        let interval;
+    useEffect(()=>{        
+        let interval;
         if(!isTestComplete)
         {
             interval = setInterval(()=>{

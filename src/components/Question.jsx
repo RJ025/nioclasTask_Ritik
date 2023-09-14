@@ -2,14 +2,8 @@ import { MathJax , MathJaxContext } from 'better-react-mathjax';
 import React from 'react'
 
 const Question = ({ques}) => {
-  
-  const config = {
-      tex : {
-        inlineMath : [['$' , '$'] , ['\\(' , '//)']]
-      }
-  };
 
-  return (
+  return (!ques)? null :(
 
     <MathJax>{ques}</MathJax>
 
